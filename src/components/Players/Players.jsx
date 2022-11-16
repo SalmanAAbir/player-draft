@@ -14,6 +14,7 @@ const Players = () => {
     function handleAddPlayer(props) {
         console.log('Player Added', props);
         const newCart = [...cart, props];
+        setCart(newCart);
     }
     return (
         
@@ -26,7 +27,7 @@ const Players = () => {
             </div>
         </div>
         
-        <Cart cart={cart}/>
+        <Cart cart={cart} key={cart.unique_id}/>
         </div>
     );
 };
